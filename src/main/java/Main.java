@@ -19,7 +19,7 @@ public class Main {
                     }
                 }
                 if (flag != true)
-                    System.out.println(input.substring(5) + ": command not found");
+                    System.out.println(input.substring(5) + ": not found");
                 continue;
             }
             if (input.equals("exit"))
