@@ -9,8 +9,9 @@ public class Main {
             if (input.startsWith("type")) {
                 if (input.substring(5).equals("echo"))
                     System.out.println(input.substring(5) + " is a shell builtin");
-                if (input.substring(5).equals("exit"))
+                else if (input.substring(5).equals("exit"))
                     System.out.println(input.substring(5) + " is a shell builtin");
+                continue;
             }
             if (input.equals("exit"))
                 break;
