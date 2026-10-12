@@ -6,6 +6,12 @@ public class Main {
         while (true) {
             System.out.print("$ ");
             String input = sc.nextLine();
+            if (input.startsWith("type")) {
+                if (input.substring(5).equals("echo"))
+                    System.out.println(input.substring(5) + "is a shell builtin");
+                if (input.substring(5).equals("exit"))
+                    System.out.println(input.substring(5) + "is a shell builtin");
+            }
             if (input.equals("exit"))
                 break;
             if (input.startsWith("echo"))
