@@ -11,6 +11,8 @@ public class Main {
                     System.out.println(input.substring(5) + " is a shell builtin");
                 else if (input.substring(5).equals("exit"))
                     System.out.println(input.substring(5) + " is a shell builtin");
+                else
+                    System.out.println(input.substring(5) + " : command not found");
                 continue;
             }
             if (input.equals("exit"))
