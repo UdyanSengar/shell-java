@@ -3,18 +3,23 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
+        boolean flag;
         String[] commands = { "echo", "exit", "type" };
         while (true) {
             System.out.print("$ ");
             String input = sc.nextLine();
             if (input.startsWith("type")) {
+                flag = false;
                 for (int i = 0; i < commands.length; i++) {
                     if (input.substring(5).equals(commands[i])) {
                         System.out.println(commands[i] + " is a shell builtin");
-                        continue;
+                        flag = true;
+                        break;
+
                     }
                 }
-                System.out.println(input.substring(5) + " : command not found");
+                if (flag != true)
+                    System.out.println(input.substring(5) + " : command not found");
                 continue;
             }
             if (input.equals("exit"))
